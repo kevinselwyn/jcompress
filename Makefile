@@ -13,8 +13,9 @@ test: build
 	./$(EXEC) test/sonnet.txt
 
 memcheck:
-	gcc -o $(NAME) $(NAME).c -lm -ljpeg -g -O0
-	valgrind --tool=memcheck --leak-check=yes ./$(NAME) test/sonnet.txt
+	mkdir -p $(BUILD)
+	gcc -o $(BUILD)/$(NAME) $(NAME).c -lm -ljpeg -g -O0
+	valgrind --tool=memcheck --leak-check=yes ./$(BUILD)/$(NAME) test/sonnet.txt
 
 install: build
 	install -m 0755 $(EXEC) $(BIN_DIR)
