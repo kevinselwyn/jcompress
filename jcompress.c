@@ -5,10 +5,6 @@
 #include <jpeglib.h>
 #include <unistd.h>
 
-#if !defined(__APPLE__)
-#include <malloc.h>
-#endif
-
 #define TMP "tmp.jpg"
 
 char *exec = NULL;

@@ -1,20 +1,20 @@
-#jcompress
+# jcompress
 
 Utility for observing the data lost in JPEG compression
 
-##Description
+## Description
 
 This utility will take plaintext, convert it into a JPEG, compress it, decompress it, and then convert it back into plaintext.
 
 See [In Depth](#in-depth) below for more details.
 
-##Installation
+## Installation
 
 ```bash
 make && sudo make install
 ```
 
-##Usage
+## Usage
 
 ```bash
 Usage: jcompress [--text,-t] <text outfile>
@@ -30,7 +30,7 @@ jcompress test/sonnet.txt
 
 The default quality is 100.
 
-##In Depth
+## In Depth
 
 Here's a bit of a breakdown of the process:
 
@@ -53,6 +53,6 @@ So when we get back to the pixel that should represent our `A`, the color of the
 
 It is interesting to note just how quickly plaintext (and images) can get mangled, even at the highest qualities, by JPEG compression and decompression.
 
-#Disclaimer
+# Disclaimer
 
 This is pretty obviously inspired by Tom Scott's [Romeo](http://www.tomscott.com/romeo/) project. Tom imported text files as RAW in Adobe Photoshop, saved as JPEG, reopened, and then saved again as RAW. I had managed to achieve this workflow with some Photoshop scripting, but was ultimately unsatisfied with the slow speed and lack of portability (Hello, Linux users without Photoshop).
